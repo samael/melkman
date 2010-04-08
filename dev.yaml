@@ -21,7 +21,9 @@ pubsubhubbub_client: {
 }
 
 plugins:
-    - pattern: melkman.*
-      enabled: true
+    # first matched pattern is used, put more specific pattens
+    # earlier.
     - pattern: melkman.fetch.pubsubhubbub.*
       enabled: false
+    - pattern: melkman.*
+      enabled: true
